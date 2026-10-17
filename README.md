@@ -6,36 +6,53 @@ Provides product thinking knowledge, frameworks, user research guidelines, and t
 
 ---
 
-## 🚀 Installation
+## 🚀 Quick Install Guide
 
-### 1. GitHub Copilot (VS Code & GitHub CLI)
+### 💻 1. For VS Code Users (Recommended — Takes 30 seconds)
 
-Add the marketplace catalog to GitHub Copilot:
+You can add the `raumnebenan` plugin to GitHub Copilot in VS Code in 3 simple steps:
+
+1. **Open Settings**:  
+   Press `Cmd + Shift + P` (Mac) or `Ctrl + Shift + P` (Windows/Linux), type:  
+   `Preferences: Open User Settings (JSON)` and press **Enter**.
+2. **Add the Marketplace**:  
+   Add this entry to your `settings.json`:
+   ```json
+   "chat.plugins.marketplaces": [
+     "https://github.com/mynona/raumnebenan-marketplace"
+   ]
+   ```
+   Save the file (`Cmd + S` / `Ctrl + S`).
+3. **Install the Plugin**:  
+   Press `Cmd + Shift + P` (or `Ctrl + Shift + P`), type:  
+   `Chat: Manage Plugins` (or open **Agent Customizations → Plugins**).  
+   Find **raumnebenan** and click **Install**.
+
+*That's it! The raumnebenan knowledge base and tools are now active in your Copilot Chat.*
+
+---
+
+### ⚡ 2. For Terminal / GitHub CLI Users
+
+If you use the `gh` command-line tool:
+
 ```bash
 gh copilot plugin marketplace add mynona/raumnebenan-marketplace
-```
-
-Install the `raumnebenan` plugin:
-```bash
 gh copilot plugin install raumnebenan
 ```
 
 ---
 
-### 2. Claude Code CLI
+### 🤖 3. For Claude Users
 
-Add the MCP server directly to Claude Code:
+#### Claude Code CLI:
 ```bash
 claude mcp add raumnebenan https://www.raumnebenan.de/mcp
 ```
+*(Or simply open this repository in Claude Code — it will auto-detect `.mcp.json` automatically).*
 
-Or, if working inside this repository, Claude Code automatically discovers the root `.mcp.json`.
-
----
-
-### 3. Claude Desktop
-
-Add the following to your `claude_desktop_config.json` (on macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`, on Windows: `%APPDATA%\Claude\claude_desktop_config.json`):
+#### Claude Desktop:
+Add the following to your `claude_desktop_config.json`:
 
 ```json
 {
@@ -50,20 +67,6 @@ Add the following to your `claude_desktop_config.json` (on macOS: `~/Library/App
 
 ---
 
-### 4. VS Code Extension (Official Marketplace)
-
-You can package and publish this repository directly as a VS Code Extension contributing the agent plugin:
-
-```bash
-# Package extension into .vsix
-npm run package
-
-# Publish to Visual Studio Marketplace (requires personal access token)
-npm run publish
-```
-
----
-
 ## 📦 What's Included
 
 - **MCP Server**: Pre-configured connection to `https://www.raumnebenan.de/mcp` providing:
@@ -71,8 +74,8 @@ npm run publish
   - `get_article_details_by_slugs`: Retrieve full article markdown content.
   - `list_glossary`: Access comprehensive definitions for product management & user research terms.
   - `list_categories` & `get_stories_by_category`: Browse the Product Thinking pillars (foundation, sense, focus, discover, deliver).
-- **Blueprint Skill**: [dummy-skill](.github/plugins/raumnebenan/skills/dummy-skill/SKILL.md) for easily authoring new skills.
-- **Blueprint Agent**: [dummy-agent](.github/plugins/raumnebenan/com.github.copilot/agents/dummy-agent.agent.md) for customizing subagents with MCP tool permissions.
+- **Blueprint Skill**: [dummy-skill](.github/plugins/raumnebenan-template/skills/dummy-skill/SKILL.md) for easily authoring new skills.
+- **Blueprint Agent**: [dummy-agent](.github/plugins/raumnebenan-template/com.github.copilot/agents/dummy-agent.agent.md) for customizing subagents with MCP tool permissions.
 
 ---
 
@@ -85,19 +88,15 @@ npm run publish
 │   ├── plugin/
 │   │   └── marketplace.json                 # Marketplace catalog
 │   └── plugins/
-│       └── raumnebenan/                     # The raumnebenan plugin package
-│           ├── plugin.json                  # Manifest (Agent Plugins v1.1.0)
-│           ├── mcp.json                     # MCP server config (https://www.raumnebenan.de/mcp)
-│           ├── README.md                    # Package documentation
-│           ├── CHANGELOG.md                 # Version changelog
-│           ├── LICENSE                      # MIT license
-│           ├── skills/                      # Bundled skills
-│           │   └── dummy-skill/
-│           └── com.github.copilot/          # Copilot-specific contributions
-│               └── agents/
-│                   └── dummy-agent.agent.md
+│       ├── raumnebenan/                     # The published plugin package
+│       │   ├── plugin.json                  # Manifest (Agent Plugins v1.1.0)
+│       │   ├── mcp.json                     # MCP server config (https://www.raumnebenan.de/mcp)
+│       │   ├── README.md                    # Package documentation
+│       │   └── CHANGELOG.md                 # Version changelog
+│       └── raumnebenan-template/            # Offline blueprint reference for skills & agents
+│           ├── skills/                      # Skill templates
+│           └── com.github.copilot/          # Agent templates
 ├── .mcp.json                                # MCP config for local workspace & Claude Code
-├── package.json                             # VS Code Extension manifest for vsce packaging
 ├── LICENSE                                  # MIT license
 └── README.md                                # Root documentation
 ```
