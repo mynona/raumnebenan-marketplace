@@ -1,20 +1,16 @@
-# raumnebenan Plugin
+# raumnebenan
 
-**Version**: 1.0.0
+The raumnebenan plugin connects compatible agent clients to the product thinking knowledge base at [raumnebenan.de](https://www.raumnebenan.de) through its remote Model Context Protocol (MCP) server.
 
-A portable Agent Plugin providing product thinking knowledge, skills, agents, and MCP server connectivity from [raumnebenan.de](https://www.raumnebenan.de).
+## Included
 
-## Capabilities
+- **MCP server**: `https://www.raumnebenan.de/mcp`, configured in [mcp.json](mcp.json).
+- **Knowledge tools**: Search and browse product thinking articles, retrieve article content, explore stories, and look up glossary definitions.
 
-### 1. Model Context Protocol (MCP) Server
-- **Endpoint**: `https://www.raumnebenan.de/mcp`
-- Configured in [mcp.json](mcp.json).
-- Provides tools for searching articles, fetching article markdown, exploring stories, and querying product thinking glossary definitions.
+This package contains no bundled skills or custom agents. Skill and agent blueprints are maintained separately in the [plugin template](../raumnebenan-template/README.md).
 
-### 2. Skills
-- Located in [skills/](skills/).
-- [dummy-skill](skills/dummy-skill/SKILL.md): Blueprint skill template.
+## Installation
 
-### 3. Agents
-- Located in [com.github.copilot/agents/](com.github.copilot/agents/).
-- [dummy-agent](com.github.copilot/agents/dummy-agent.agent.md): Blueprint agent template.
+Install **raumnebenan** from the [raumnebenan marketplace](https://github.com/mynona/raumnebenan-marketplace) using your agent client's plugin manager. For clients that support remote MCP servers directly, configure the endpoint above.
+
+See the [marketplace README](../../../README.md) for client-specific setup instructions.
