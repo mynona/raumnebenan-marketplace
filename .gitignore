@@ -3,4 +3,8 @@
 /plan/
 node_modules
 *.vsix
+.env
+.env.local
+
+
 
