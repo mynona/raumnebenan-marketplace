@@ -33,7 +33,7 @@
     "raumnebenan"
   ],
   "files": [
-    ".github/plugins/**",
+    ".github/plugins/raumnebenan/**",
     ".github/plugin/marketplace.json",
     "README.md",
     "LICENSE"
@@ -51,7 +51,9 @@
   },
   "scripts": {
     "package": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "vsce-package": "vsce package",
+    "vsce-publish": "vsce publish"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.0.0"

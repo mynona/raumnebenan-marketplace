@@ -1,3 +1,6 @@
 # Ignored folders
 .DS_Store
 /plan/
+node_modules
+*.vsix
+
