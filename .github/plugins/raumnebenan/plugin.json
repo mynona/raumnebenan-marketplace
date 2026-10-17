@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.1.0/plugin.schema.json",
+  "name": "raumnebenan",
+  "version": "1.0.0",
+  "description": "Product thinking knowledge base and MCP server for raumnebenan.de",
+  "author": {
+    "name": "Andreas Soller",
+    "url": "https://www.raumnebenan.de"
+  },
+  "homepage": "https://www.raumnebenan.de",
+  "repository": "https://github.com/mynona/raumnebenan-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "product-thinking",
+    "user-research",
+    "product-management",
+    "mcp",
+    "copilot",
+    "claude",
+    "raumnebenan"
+  ],
+  "mcpServers": "mcp.json"
+}

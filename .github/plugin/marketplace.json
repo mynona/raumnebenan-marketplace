@@ -1,0 +1,28 @@
+{
+  "name": "raumnebenan-marketplace",
+  "owner": {
+    "name": "Andreas Soller",
+    "url": "https://www.raumnebenan.de"
+  },
+  "metadata": {
+    "description": "raumnebenan marketplace for GitHub Copilot & Claude agent plugins, skills, and MCP tooling",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "raumnebenan",
+      "description": "Product thinking knowledge base and MCP server for raumnebenan.de",
+      "version": "1.0.0",
+      "author": {
+        "name": "Andreas Soller",
+        "url": "https://www.raumnebenan.de"
+      },
+      "homepage": "https://www.raumnebenan.de",
+      "repository": "https://github.com/mynona/raumnebenan-marketplace",
+      "license": "MIT",
+      "source": "./.github/plugins/raumnebenan",
+      "mcpServers": "mcp.json",
+      "strict": true
+    }
+  ]
+}

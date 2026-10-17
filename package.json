@@ -1,0 +1,59 @@
+{
+  "name": "raumnebenan",
+  "displayName": "raumnebenan - product thinking (mcp)",
+  "description": "raumnebenan.de is a resource hub focused on actionable product thinking for product owners, product designers, business analysts, product managers, agile coaches, and user researchers.",
+  "version": "1.0.0",
+  "publisher": "raumnebenan",
+  "license": "MIT",
+  "homepage": "https://www.raumnebenan.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mynona/raumnebenan-marketplace"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Other"
+  ],
+  "keywords": [
+    "product-thinking",
+    "user-research",
+    "design-thinking",
+    "product-strategy",
+    "agile-delivery",
+    "mcp",
+    "copilot-chat",
+    "agent-plugin",
+    "agent-plugins",
+    "agentplugins",
+    "copilot-plugin",
+    "ai",
+    "raumnebenan"
+  ],
+  "files": [
+    ".github/plugins/**",
+    ".github/plugin/marketplace.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "contributes": {
+    "agentPlugins": [
+      {
+        "id": "raumnebenan",
+        "path": "./.github/plugins/raumnebenan"
+      }
+    ],
+    "configurationDefaults": {
+      "chat.plugins.enabled": true
+    }
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.0.0"
+  }
+}
