@@ -74,8 +74,6 @@ Add the following to your `claude_desktop_config.json`:
   - `get_article_details_by_slugs`: Retrieve full article markdown content.
   - `list_glossary`: Access comprehensive definitions for product management & user research terms.
   - `list_categories` & `get_stories_by_category`: Browse the Product Thinking pillars (foundation, sense, focus, discover, deliver).
-- **Blueprint Skill**: [dummy-skill](.github/plugins/raumnebenan-template/skills/dummy-skill/SKILL.md) for easily authoring new skills.
-- **Blueprint Agent**: [dummy-agent](.github/plugins/raumnebenan-template/com.github.copilot/agents/dummy-agent.agent.md) for customizing subagents with MCP tool permissions.
 
 ---
 
